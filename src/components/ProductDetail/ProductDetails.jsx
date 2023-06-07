@@ -7,10 +7,12 @@ import { FaShoppingCart, FaStar } from "react-icons/fa";
 import { Section } from "./Styled-Product";
 import Navs from '../Navbar/Navs';
 import { addToCart, updateOrderTotal } from '../../Redux/Reducers/cartSlice';
-import meesho_logo from '../Images/meesho logo.png'
+// import meesho_logo from '../Images/meesho logo.png'
 
 
 const ProductDetails = () => {
+
+    const authentication = JSON.parse(localStorage.getItem("user") || null);
 
     const { id } = useParams();
     const product = useSelector(state => state.productDetails.product);
@@ -46,9 +48,14 @@ const ProductDetails = () => {
 
 
     const handleBuyNow = () => {
-        const orderTotal = product.price;
-        dispatch(updateOrderTotal(orderTotal))
-        navigate('/cart/address');
+        if (authentication) {
+            const orderTotal = product.price;
+            dispatch(updateOrderTotal(orderTotal))
+            navigate('/cart/address');
+        }
+        else {
+            navigate("/register")
+        }
     }
 
 
