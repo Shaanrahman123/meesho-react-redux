@@ -12,7 +12,7 @@ import ProductDetails from './components/ProductDetail/ProductDetails';
 import Address from './components/Address/Address';
 import Checkout from './components/Checkout/Checkout';
 import Footer from './components/Footer/Footer';
-import Nav_product from './components/Products/Nav_product';
+import NavProduct from './components/Products/Nav_product';
 import SearchProduct from './components/Products/SearchProduct';
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/cart/address" element={<Address />} />
           <Route path="/cart/address/checkout" element={<Checkout />} />
-          <Route path='/product/category' element={<Nav_product />} />
+          <Route path='/product/category' element={<NavProduct />} />
           <Route path='/search' element={<SearchProduct />} />
         </Routes>
         <Footer />

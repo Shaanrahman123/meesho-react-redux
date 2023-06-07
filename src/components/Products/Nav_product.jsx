@@ -5,6 +5,8 @@ import './productDetails.css'
 import ProductData from '../../ProductData';
 import { useSelector } from 'react-redux';
 import Navs from '../Navbar/Navs';
+import { Helmet } from 'react-helmet';
+import meesho from '../Images/meesho logo.png'
 
 const Nav_product = () => {
 
@@ -23,6 +25,10 @@ const Nav_product = () => {
     return (
 
         <>
+            <Helmet>
+                <title>{`Meesho ${filteredData.length > 0 ? filteredData[0].category : 'Not Found'}`}</title>
+                <link rel="icon" type="image/png" href={meesho} />
+            </Helmet>
             <Navs />
             <div className="big-box2">
                 <div className="each-item-wrapper">

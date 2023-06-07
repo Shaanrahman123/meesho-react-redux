@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 
 // import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import {  useSelector } from 'react-redux';
 
 import './Address.css'
 
@@ -10,7 +10,6 @@ import './Address.css'
 
 const Address = () => {
 
-    const dispatch = useDispatch();
     const navigate = useNavigate();
 
     const TotalCart = useSelector(state => state.cart.total);

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { FaStar } from "react-icons/fa";
 import { Link, useLocation } from 'react-router-dom';
 import './productDetails.css'

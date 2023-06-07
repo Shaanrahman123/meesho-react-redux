@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Navs from '../../components/Navbar/Navs'
 import { useDispatch, useSelector } from 'react-redux'
 import './Cart.css'
 import { addToCart, removeFromCart, updateOrderTotal } from '../../Redux/Reducers/cartSlice'
 import { useNavigate } from 'react-router-dom'
 import blankcart from "../../components/Images/blankcart.jpg"
+import { Helmet } from 'react-helmet'
+import meesho from '../../components/Images/meesho logo.png'
 
 
 const Cart = () => {
@@ -65,6 +67,10 @@ const Cart = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Meesho Cart</title>
+                <link rel="icon" type="image/png" href={meesho} />
+            </Helmet>
             <Navs />
             {
                 cart.length > 0 ? (

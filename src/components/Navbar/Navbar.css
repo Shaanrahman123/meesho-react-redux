@@ -340,7 +340,7 @@ nav ul li:hover {
 
 @media screen and (max-width: 426px) {
     .logoContainer {
-        width: 5rem;
+        width: 8rem;
         transform: rotateY(45deg);
     }
 
@@ -359,6 +359,7 @@ nav ul li:hover {
         border-left: 1.5px solid #ccc;
         border-Right: 1.5px solid #ccc;
         font-size: 17px;
+        display: none;
         /* display: none; */
     }
 
