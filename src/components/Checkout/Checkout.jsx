@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react' 
+import React, { useEffect } from 'react'
 
 import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 import DoneIcon from '@mui/icons-material/Done';
@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import './Checkout.css'
 import { remove } from '../../Redux/Reducers/cartSlice';
+import Navs from '../Navbar/Navs';
 
 
 
@@ -36,6 +37,7 @@ const Checkout = () => {
 
     return (
         <>
+            <Navs />
             <section id="address-section">
 
                 <form action="">
